@@ -20,7 +20,7 @@ A versatile and extensible state machine class for c#
   - a boolean determining if this state can be transitioned back to from the next state (optional)
   
 	
-	```csharp
+```csharp
 	StateData<GameState>[] stateList = new StateData<GameState>[]
 	{
 		new StateData<GameState> (State.WALK, OnStartWalking, OnStopWalking, new GameState[]{State.RUN, State.CLIMB, State.DIE}),
