@@ -19,6 +19,7 @@ A versatile and extensible state machine class for c#
   - valid transitions (a list of state name enums) if empty can transition to any state
   - a boolean determining if this state can be transitioned back to from the next state (optional)
   
+	
 	```csharp
 	StateData<GameState>[] stateList = new StateData<GameState>[]
 	{
