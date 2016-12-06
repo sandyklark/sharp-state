@@ -20,15 +20,15 @@ A versatile and extensible state machine class for c#
   - a boolean determining if this state can be transitioned back to from the next state (optional)
   
 	
-```csharp
-	StateData<GameState>[] stateList = new StateData<GameState>[]
-	{
-		new StateData<GameState> (State.WALK, OnStartWalking, OnStopWalking, new GameState[]{State.RUN, State.CLIMB, State.DIE}),
-		new StateData<GameState> (State.RUN, OnStartRunning, OnStopRunning, new GameState[]{GameState.WALK, State.CLIMB, State.DIE}),
-		new StateData<GameState> (State.CLIMB, OnStartClimbing, OnStopClimbing, new GameState[]{GameState.WALK, State.DIE}),
-		new StateData<GameState> (State.DIE, null, null)
-	}
-```
+  ```csharp
+StateData<GameState>[] stateList = new StateData<GameState>[]
+{
+	new StateData<GameState> (State.WALK, OnStartWalking, OnStopWalking, new GameState[]{State.RUN, State.CLIMB, State.DIE}),
+	new StateData<GameState> (State.RUN, OnStartRunning, OnStopRunning, new GameState[]{GameState.WALK, State.CLIMB, State.DIE}),
+	new StateData<GameState> (State.CLIMB, OnStartClimbing, OnStopClimbing, new GameState[]{GameState.WALK, State.DIE}),
+	new StateData<GameState> (State.DIE, null, null)
+}
+  ```
 
 3. Initialize state machine with state list (State machine is generically typed with state enum type)
 
