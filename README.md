@@ -28,7 +28,7 @@ A versatile and extensible state machine class for c#
 		new StateData<GameState> (State.CLIMB, OnStartClimbing, OnStopClimbing, new GameState[]{GameState.WALK, State.DIE}),
 		new StateData<GameState> (State.DIE, null, null)
 	}
-	```
+```
 
 3. Initialize state machine with state list (State machine is generically typed with state enum type)
 
